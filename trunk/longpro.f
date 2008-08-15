@@ -17,10 +17,10 @@ C----------------------------------------------------------------------
 C     COMMON BLOCK DECLARATIONS
 C----------------------------------------------------------------------
       COMMON /COM1/M,NT,DELX,STRDATA,WID,ELEV,WSEBC,MANN
-      COMMON /COM2/RUN,Q,DELT,XPRINT,TPRINT,TOX,RHO,G
+      COMMON /COM2/Q,DELT,XPRINT,TPRINT,TOX,RHO,G,RUN
       COMMON /COM3/VISKIN,DIMID,OMEGA,REY
       COMMON /COM4/SIGMA,VOLCON,RHOC,RHOM,RHOA,ALPHA
-      COMMON /TECTO/TURNON1,TURNOFF1,TURNON2,TURNOFF2,HINGE,RATE
+      COMMON /TECTO/RATE,TURNON1,TURNOFF1,TURNON2,TURNOFF2,HINGE
 C----------------------------------------------------------------------
 C     FILE MANAGEMENT PORTION : WHICH FILES ARE OPENED AS INPUT        
 C     OR OUTPUT FILES                                                  
@@ -136,7 +136,7 @@ C----------------------------------------------------------------------
 C     COMMON BLOCK DECLARATIONS
 C----------------------------------------------------------------------
       COMMON /COM1/M,NT,DELX,STRDATA,WID,ELEV,WSEBC,MANN
-      COMMON /COM2/RUN,Q,DELT,XPRINT,TPRINT,TOX,RHO,G
+      COMMON /COM2/Q,DELT,XPRINT,TPRINT,TOX,RHO,G,RUN
 C***********************************************************************
 C     ASSIGN INITIAL ELEVATIONS
 C***********************************************************************
@@ -203,7 +203,7 @@ C----------------------------------------------------------------------
 C  COMMON BLOCKS
 C----------------------------------------------------------------------
       COMMON /COM1/M,NT,DELX,STRDATA,WID,ELEV,WSEBC,MANN
-      COMMON /COM2/RUN,Q,DELT,XPRINT,TPRINT,TOX,RHO,G
+      COMMON /COM2/Q,DELT,XPRINT,TPRINT,TOX,RHO,G,RUN
       COMMON /COM4/SIGMA,VOLCON,RHOC,RHOM,RHOA,ALPHA
 C----------------------------------------------------------------------
 C  DEFINE SOME BOUNDARY CONDITIONS
@@ -303,7 +303,7 @@ C----------------------------------------------------------------------
 C     COMMON BLOCK DECLARATION
 C----------------------------------------------------------------------
       COMMON /COM1/M,NT,DELX,STRDATA,WID,ELEV,WSEBC,MANN
-      COMMON /COM2/ RUN,Q,DELT,XPRINT,TPRINT,TOX,RHO,G
+      COMMON /COM2/Q,DELT,XPRINT,TPRINT,TOX,RHO,G,RUN
 C---------------------------------------------------------------------
 C   CHECK TO SEE IF ITS IN POSITION TO PRINT
 C---------------------------------------------------------------------
@@ -352,7 +352,7 @@ C----------------------------------------------------------------------
 C     COMMON BLOCK DECLARATION
 C----------------------------------------------------------------------
       COMMON /COM1/M,NT,DELX,STRDATA,WID,ELEV,WSEBC,MANN
-      COMMON /COM2/RUN,Q,DELT,XPRINT,TPRINT,TOX,RHO,G
+      COMMON /COM2/Q,DELT,XPRINT,TPRINT,TOX,RHO,G,RUN
       COMMON /COM3/VISKIN,DIMID,OMEGA,REY
       COMMON /COM4/SIGMA,VOLCON,RHOC,RHOM,RHOA,ALPHA
 C***********************************************************************
@@ -460,9 +460,9 @@ C----------------------------------------------------------------------
 C     COMMON BLOCK DECLARATION
 C----------------------------------------------------------------------
       COMMON /COM1/M,NT,DELX,STRDATA,WID,ELEV,WSEBC,MANN
-      COMMON /COM2/RUN,Q,DELT,XPRINT,TPRINT,TOX,RHO,G
+      COMMON /COM2/Q,DELT,XPRINT,TPRINT,TOX,RHO,G,RUN
       COMMON /COM4/SIGMA,VOLCON,RHOC,RHOM,RHOA,ALPHA
-      COMMON /TECTO/TURNON1,TURNOFF1,TURNON2,TURNOFF2,HINGE,RATE
+      COMMON /TECTO/RATE,TURNON1,TURNOFF1,TURNON2,TURNOFF2,HINGE
 C***********************************************************************
       IF (NT.GE.TURNON1 .AND. NT.LE.TURNOFF1 .OR. NT.GE.TURNON2 .AND. NT
      #   .LE.TURNOFF2) THEN
@@ -491,7 +491,7 @@ C----------------------------------------------------------------------
       INTEGER*4 NT,M
       REAL*8 DIMDL,RHS,OMEGA,REY
       COMMON /COM1/M,NT,DELX,STRDATA,WID,ELEV,WSEBC,MANN
-      COMMON /COM2/RUN,Q,DELT,XPRINT,TPRINT,TOX,RHO,G
+      COMMON /COM2/Q,DELT,XPRINT,TPRINT,TOX,RHO,G,RUN
       COMMON /COM3/VISKIN,DIMID,OMEGA,REY
 C----------------------------------------------------------------------
 C      COMMON BLOCK DECLARATION
