@@ -199,6 +199,7 @@ C       Q(JN)=QMAX*(FLOATJ(JN)/M)
       REAL*8 RHOC,RHOM,RHOA,ALPHA,V2,RCH2,POS,DINIT,RTBIS,DY
       INTEGER*4 M,JN,NT,NODE
       CHARACTER*25 RUN
+      CHARACTER ANS
 C----------------------------------------------------------------------
 C  COMMON BLOCKS
 C----------------------------------------------------------------------
@@ -209,7 +210,8 @@ C----------------------------------------------------------------------
 C  DEFINE SOME BOUNDARY CONDITIONS
 C----------------------------------------------------------------------
       IF (ELEV(M) .GT. WSEBC) THEN
-         PAUSE 
+         WRITE(*,*) 'Pausing...'
+         READ(*,*) ANS
       ENDIF
       DINIT = WSEBC - ELEV(M)
 C----------------------------------------------------------------------
